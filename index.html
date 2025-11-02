@@ -31,12 +31,10 @@
             @apply border-2 border-white text-white font-semibold py-3 px-8 rounded-lg transition duration-300 hover:bg-white hover:text-primary;
         }
 
-        /* Hero Background: Dark Overlay over the specified local image */
+        /* Hero Background: Dark Overlay over the uploaded image */
         .hero-background {
-            /* IMPORTANT: This assumes you have a file at ./assets/images/hero-bg.jpg 
-               If running in an isolated editor, this will fail unless the path is a public URL.
-            */
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('./assets/images/hero-bg.jpg');
+            /* Using the latest uploaded image as the main hero background */
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728');
             background-size: cover;
             background-position: center;
         }
@@ -164,14 +162,10 @@
                 </p>
 
                 <div class="max-w-4xl mx-auto">
-                    <!-- Updated to use the HTML5 <video> tag for local file support -->
+                    <!-- SOURCE: Using the uploaded video ID. Assuming mp4 format. -->
                     <div class="video-container">
-                         <video controls poster="./assets/images/tour-poster.jpg">
-                            <!-- 
-                                IMPORTANT: This assumes you have a file at ./assets/videos/tour.mp4 
-                                You will need to replace this with your GitHub Raw URL if running in an isolated editor.
-                            -->
-                            <source src="./assets/videos/tour.mp4" type="video/mp4">
+                         <video controls poster="uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728">
+                            <source src="uploaded:image_a0a2af.png-99c1da01-76c9-4180-ac75-91399ba912a5" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -183,7 +177,7 @@
             </div>
         </section>
         
-        <!-- 4. Image Gallery / Gallery Section -->
+        <!-- 4. Image Gallery / Gallery Section (UPDATED: Using specific uploaded image IDs) -->
         <section id="gallery" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center mb-4 text-primary">A Visual Experience: Project Images</h2>
@@ -192,33 +186,33 @@
                 </p>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Image Card 1: Exterior (Updated Path) -->
+                    <!-- Image Card 1: Exterior (Latest Upload) -->
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="./assets/images/project-exterior.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e3a8a/d9b15c?text=Project+Exterior';" alt="Project Exterior View" class="w-full h-48 object-cover">
+                        <img src="uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728" alt="Project Exterior View" class="w-full h-48 object-cover">
                         <div class="p-4 bg-gray-50">
                             <p class="font-semibold text-primary">Grand Facade</p>
                             <p class="text-sm text-gray-500">The iconic SOBHA design language.</p>
                         </div>
                     </div>
-                    <!-- Image Card 2: Living Room (Updated Path) -->
+                    <!-- Image Card 2: Living Room (Image ID 2) -->
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="./assets/images/living-room.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e3a8a/d9b15c?text=Luxury+Living+Room';" alt="Luxury Living Room Interior" class="w-full h-48 object-cover">
+                        <img src="uploaded:image_a09425.png-85c04261-49ba-4b06-8738-98bfaff0418a" alt="Luxury Living Room Interior" class="w-full h-48 object-cover">
                         <div class="p-4 bg-gray-50">
                             <p class="font-semibold text-primary">Living Area</p>
                             <p class="text-sm text-gray-500">Unmatched spatial elegance.</p>
                         </div>
                     </div>
-                    <!-- Image Card 3: Amenities (Updated Path) -->
+                    <!-- Image Card 3: Amenities (Image ID 3) -->
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="./assets/images/pool.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e3a8a/d9b15c?text=Rooftop+Swimming+Pool';" alt="Rooftop Swimming Pool" class="w-full h-48 object-cover">
+                        <img src="uploaded:image_a09ee7.png-9a54a7f0-6f04-407c-acb5-4d02b8661c01" alt="Rooftop Swimming Pool" class="w-full h-48 object-cover">
                         <div class="p-4 bg-gray-50">
                             <p class="font-semibold text-primary">Infinity Pool</p>
                             <p class="text-sm text-gray-500">The perfect retreat high above the city.</p>
                         </div>
                     </div>
-                    <!-- Image Card 4: View (Updated Path) -->
+                    <!-- Image Card 4: View (Image ID 4) -->
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="./assets/images/balcony.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e3a8a/d9b15c?text=Apartment+Balcony+View';" alt="Apartment Balcony View" class="w-full h-48 object-cover">
+                        <img src="uploaded:image_a09aed.png-61cda40e-45ba-43b7-b05f-357b989cc1e8" alt="Apartment Balcony View" class="w-full h-48 object-cover">
                         <div class="p-4 bg-gray-50">
                             <p class="font-semibold text-primary">Expansive Balcony</p>
                             <p class="text-sm text-gray-500">Private outdoor spaces with stunning views.</p>
@@ -243,19 +237,19 @@
                 </p>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Configuration Card 1: 3 BHK (Updated Path) -->
+                    <!-- Configuration Card 1: 3 BHK (Updated with actual floor plan snippet) -->
                     <div class="feature-card">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-bed mr-3 text-secondary"></i> 3 BHK Luxury</h3>
+                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-bed mr-3 text-secondary"></i> 3 BHK Luxury (Type Q2)</h3>
                         <p class="text-gray-600 mb-4">Ideal for modern families, offering optimal space utilization and privacy.</p>
                         <ul class="text-sm space-y-2 font-medium text-gray-700">
                             <li><i class="fas fa-ruler-combined mr-2 text-secondary/70"></i> **SBA:** 2,056 sq. ft. onwards</li>
                             <li><i class="fas fa-door-open mr-2 text-secondary/70"></i> **Key Feature:** Home office enabled bedroom provision.</li>
                         </ul>
-                         <!-- Replace 'floor-plan-3bhk.jpg' with the actual rendered image of the Type Q2 3BHK floor plan -->
-                         <img src="./assets/images/floor-plan-3bhk.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1e3a8a/d9b15c?text=3+BHK+Floor+Plan';" alt="3 BHK Floor Plan" class="mt-6 rounded-md w-full">
+                         <!-- Using Floor Plan Snippet from uploaded PDF -->
+                         <img src="uploaded:SOBHA Infinia_FLOOR PLANS (1) (1).pdf:Image 15" alt="3 BHK Type Q2 Floor Plan" class="mt-6 rounded-md w-full border border-gray-300 shadow-md">
                     </div>
 
-                    <!-- Configuration Card 2: 4 BHK + DH Room (Updated Path) -->
+                    <!-- Configuration Card 2: 4 BHK + DH Room (Updated with actual floor plan snippet) -->
                     <div class="feature-card">
                         <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-home mr-3 text-secondary"></i> 4 BHK + DH Room</h3>
                         <p class="text-gray-600 mb-4">The pinnacle of ultra-luxury with dedicated space for the discerning few.</p>
@@ -263,8 +257,8 @@
                             <li><i class="fas fa-ruler-combined mr-2 text-secondary/70"></i> **SBA:** 3,264 sq. ft. onwards</li>
                             <li><i class="fas fa-building mr-2 text-secondary/70"></i> **Key Feature:** Double Height (DH) Room for maximum grandeur.</li>
                         </ul>
-                         <!-- Replace 'floor-plan-4bhk.jpg' with the actual rendered image of the 4BHK floor plan -->
-                         <img src="./assets/images/floor-plan-4bhk.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1e3a8a/d9b15c?text=4+BHK+Floor+Plan';" alt="4 BHK Duplex Floor Plan" class="mt-6 rounded-md w-full">
+                         <!-- Using Floor Plan Snippet from uploaded PDF -->
+                         <img src="uploaded:SOBHA Infinia_FLOOR PLANS (1) (1).pdf:Image 1" alt="4 BHK Floor Plan" class="mt-6 rounded-md w-full border border-gray-300 shadow-md">
                     </div>
 
                     <!-- Configuration Card 3: Pricing & Handover -->
