@@ -1,146 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOBHA Insignia - Priority Access Registration</title>
+    <title>SOBHA Infinia - Luxury 3 & 4 BHK Residences</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
         .hero-background {
-            /* Using a sophisticated placeholder image for SOBHA Insignia, a luxury project */
-            background-image: url('https://placehold.co/1200x800/2c3e50/ecf0f1?text=SOBHA+Insignia+Luxury+Residences');
+            /* Replace with a high-res project image (e.g., assets/hero.jpg) */
+            background-image: url('https://placehold.co/1920x1080/0e1e3e/ffffff?text=SOBHA+INFINIA+Entrance');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        .form-card {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a premium feel */
-        }
-        .submit-btn {
-            background-color: #1e40af; /* Primary Blue */
-            transition: all 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #1d4ed8; /* Darker Blue on Hover */
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        /* Custom alert box styling */
-        .custom-alert {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-        }
+        .nav-link:hover { color: #818cf8; }
+        .form-card { backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.95); }
+        .section-heading { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+        .section-heading::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50%; height: 4px; background-color: #4f46e5; border-radius: 9999px; }
     </style>
 </head>
-<body class="min-h-screen">
+<body>
 
-    <!-- Header Section -->
-    <header class="p-4 bg-white border-b border-gray-100 shadow-sm sticky top-0 z-10">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold text-gray-800">SOBHA <span class="text-blue-700">INSIGNIA</span></h1>
-            <nav class="hidden sm:block">
-                <a href="#about" class="text-gray-600 hover:text-blue-700 mx-3 transition duration-150">About</a>
-                <a href="#features" class="text-gray-600 hover:text-blue-700 mx-3 transition duration-150">Features</a>
-                <a href="#register" class="text-white bg-blue-700 py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-150">Register</a>
+    <!-- 1. HEADER & NAVIGATION (Fixed) -->
+    <header class="p-4 bg-white border-b border-gray-100 shadow-md sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#contact" class="text-2xl font-black text-gray-900">SOBHA <span class="text-indigo-600">INFINIA</span></a>
+            <nav class="hidden lg:block space-x-6 text-sm font-semibold">
+                <a href="#project" class="nav-link text-gray-600 transition">Project Concept</a>
+                <a href="#layouts" class="nav-link text-gray-600 transition">Floor Plans</a>
+                <a href="#amenities" class="nav-link text-gray-600 transition">Amenities</a>
+                <a href="#gallery" class="nav-link text-gray-600 transition">Gallery & Videos</a>
+                <a href="#location" class="nav-link text-gray-600 transition">Location</a>
+                <a href="#contact" class="bg-indigo-600 text-white py-2 px-5 rounded-full hover:bg-indigo-700 transition shadow-lg">Enquire Now</a>
             </nav>
+            <a href="#contact" class="lg:hidden bg-indigo-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition">Contact</a>
         </div>
     </header>
 
-    <!-- Hero and Form Section -->
-    <main class="hero-background flex items-center justify-center p-4 py-16 sm:py-24">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 w-full">
+    <!-- 2. HERO / CONTACT SECTION -->
+    <section id="contact" class="hero-background flex items-center justify-center p-4 py-20 md:py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
             
-            <!-- Marketing Content -->
-            <div class="lg:w-1/2 p-6 text-white text-center lg:text-left bg-black bg-opacity-40 rounded-xl shadow-2xl">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 tracking-tighter">
-                    Elevate Your Lifestyle at <span class="text-yellow-300">SOBHA Insignia</span>
+            <!-- Marketing Copy -->
+            <div class="p-6 text-white text-center lg:text-left self-center bg-black bg-opacity-30 rounded-xl">
+                <p class="text-xl font-medium text-indigo-200 mb-3">Jakkasandra Extension, Koramangala, Bengaluru</p>
+                <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tighter">
+                    The Signature of <span class="text-yellow-400">Luxury Living</span>
                 </h2>
-                <p class="text-xl font-light mb-8 max-w-lg lg:max-w-none mx-auto lg:mx-0">
-                    Experience limited-edition smart homes in Bengaluru's most desirable location. Register now for priority access, floor plans, and pricing.
+                <p class="text-lg font-light mb-8 max-w-lg lg:max-w-none mx-auto lg:mx-0">
+                    Exclusive collection of **3 & 4 BHK residences** designed for the discerning few. Register for immediate access to floor plans and pricing.
                 </p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-sm font-semibold">
-                    <span class="p-2 border border-yellow-300 rounded-lg">4 & 5 BHK Residences</span>
-                    <span class="p-2 border border-yellow-300 rounded-lg">Smart Home Automation</span>
-                    <span class="p-2 border border-yellow-300 rounded-lg">Terrace Amenities</span>
+                    <span class="p-2 border border-indigo-300 rounded-lg">3 & 4 BHK</span>
+                    <span class="p-2 border border-indigo-300 rounded-lg">Premium Location</span>
                 </div>
             </div>
 
             <!-- Lead Capture Form Card -->
-            <div id="register" class="lg:w-1/2 flex justify-center lg:justify-end">
-                <div class="form-card p-6 sm:p-8 w-full max-w-md rounded-xl">
-                    <h3 class="text-3xl font-bold text-gray-800 mb-2 text-center">Get Priority Details</h3>
-                    <p class="text-gray-600 mb-6 text-center">Secure your slot before launch.</p>
+            <div class="flex justify-center lg:justify-end">
+                <div class="form-card p-6 sm:p-8 w-full max-w-md rounded-xl shadow-2xl border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2 text-center">Get Exclusive Details</h3>
+                    <p class="text-gray-500 mb-6 text-center text-sm">Receive price list and a virtual tour link instantly.</p>
                     
-                    <form id="leadCaptureForm" class="space-y-5">
-                        <!-- Full Name -->
+                    <form id="leadCaptureForm" class="space-y-4">
                         <div>
-                            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition">
                         </div>
-                        
-                        <!-- Email -->
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            <input type="email" id="email" name="email" placeholder="Email Address" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition">
                         </div>
-                        
-                        <!-- Phone Number -->
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition">
                         </div>
 
-                        <!-- Submit Button -->
                         <button type="submit" id="submitButton" 
-                            class="submit-btn text-white font-bold w-full py-3 rounded-lg flex items-center justify-center space-x-2">
-                            <span id="buttonText">Register for Priority Access</span>
+                            class="bg-indigo-600 text-white font-bold w-full py-3 rounded-lg hover:bg-indigo-700 transition duration-200 shadow-lg flex items-center justify-center space-x-2">
+                            <span id="buttonText">Download Brochure & Price</span>
                             <div id="loadingSpinner" class="hidden animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
                         </button>
                     </form>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Content Sections (Slightly reduced for brevity, focus remains on form) -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h3 class="text-3xl font-extrabold text-gray-800 mb-4">A Landmark of Exclusivity</h3>
-            <p class="text-lg text-gray-600">
-                SOBHA Insignia is more than just a home; it's a statement. Located strategically in Bangalore's most sought-after corridor, it offers seamless connectivity to work hubs, elite schools, and prime social infrastructure, all within a tranquil, private setting.
+    <!-- 3. PROJECT CONCEPT / MASTER PLAN SECTION -->
+    <section id="project" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="section-heading text-4xl font-extrabold text-gray-900 mb-4">The Architectural Vision</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                SOBHA Infinia is designed around the principles of space, light, and privacy, ensuring a low-density, high-quality living environment.
             </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-left">
+                <!-- Master Plan Placeholder -->
+                <div class="bg-gray-100 p-4 rounded-xl shadow-xl border border-gray-200">
+                    <img src="https://placehold.co/800x500/d1d5db/374151?text=MASTER+PLAN+RENDERING" 
+                         alt="Project Master Plan" class="w-full rounded-lg mb-4">
+                    <p class="text-sm font-semibold text-gray-700">Explore the strategic site layout, traffic-free amenity zones, and green spaces. ****</p>
+                </div>
+                
+                <!-- Project Highlights -->
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Key Project Highlights</h3>
+                    <ul class="space-y-4 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 font-bold mr-3 text-2xl leading-none">&bull;</span>
+                            <div>
+                                <strong class="text-gray-900">Self-Reliant Model:</strong> Built with SOBHA’s commitment to quality, backed by in-house design and execution capabilities.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 font-bold mr-3 text-2xl leading-none">&bull;</span>
+                            <div>
+                                <strong class="text-gray-900">Low-Density Living:</strong> Thoughtful planning for non-facing balconies and restricted traffic movement near amenity areas.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-600 font-bold mr-3 text-2xl leading-none">&bull;</span>
+                            <div>
+                                <strong class="text-gray-900">Smart Home Ready:</strong> Provisions for modern home automation systems.
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#layouts" class="mt-8 inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                        See Available Floor Plans $\rightarrow$
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="p-6 bg-gray-900 text-white text-center">
-        <p class="text-sm">&copy; 2025 SOBHA Insignia. All Rights Reserved. RERA No. Available on Request.</p>
-    </footer>
+    <!-- 4. LAYOUTS / FLOOR PLAN SECTION -->
+    <section id="layouts" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="section-heading text-4xl font-extrabold text-gray-900 mb-4">Luxurious 3 & 4 BHK Residences</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                Homes designed for maximum daylight, cross-ventilation, and optimal space utilization.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Unit 3 BHK (Type 3123 - based on PDF) -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-yellow-500 text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">3 BHK Unit (Example Unit 3123)</h3>
+                    <p class="text-sm font-semibold text-indigo-600 mb-4">SBA: 2,566 sq. ft. | Carpet Area: 2,030 sq. ft.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Expansive **Living and Dining** areas (Dining 28'x11'0").</li>
+                        <li>Dedicated Foyer for a plush arrival experience.</li>
+                        <li>Large kitchen with separate **Utility** space (6'0" wide).</li>
+                        <li>Three spacious balconies attached to key rooms.</li>
+                    </ul>
+                    <a href="#contact" class="mt-5 inline-block bg-gray-100 text-indigo-600 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+                        View Unit 3123 Floor Plan $\rightarrow$
+                    </a>
+                </div>
+
+                <!-- Unit 4 BHK (Based on Brochure Data) -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-yellow-500 text-left">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">4 BHK + DH Room (Type M)</h3>
+                    <p class="text-sm font-semibold text-indigo-600 mb-4">SBA: 3,264 sq. ft. | Carpet Area: 2,128 sq. ft.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Provision for a large **Walk-in Closet** in the master bedroom.</li>
+                        <li>Dedicated **Domestic Help Room** for service staff.</li>
+                        <li>Multiple attached bathrooms and spacious bedrooms.</li>
+                        <li>Designed with vast balconies and optimal floor plate design.</li>
+                    </ul>
+                    <a href="#contact" class="mt-5 inline-block bg-gray-100 text-indigo-600 py-2 px-4 rounded-full text-sm font-semibold hover:bg-gray-200 transition">
+                        Request 4 BHK Layout $\rightarrow$
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 5. AMENITIES SECTION -->
+    <section id="amenities" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="section-heading text-4xl font-extrabold text-gray-900 mb-4">Above-Class Amenities</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                Indulge in a luxurious lifestyle with features designed for recreation, fitness, and relaxation.
+            </p>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-left">
+                
+                <!-- Amenity Card 1 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🏊</span>
+                    <p class="font-bold text-gray-800">Swimming Pool</p>
+                    <p class="text-sm text-gray-500">Relaxing pool and sun deck area.</p>
+                </div>
+
+                <!-- Amenity Card 2 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🏋️</span>
+                    <p class="font-bold text-gray-800">State-of-the-Art Gym</p>
+                    <p class="text-sm text-gray-500">Fully equipped modern fitness center.</p>
+                </div>
+
+                <!-- Amenity Card 3 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🏃</span>
+                    <p class="font-bold text-gray-800">Jogging Path & Boardwalk</p>
+                    <p class="text-sm text-gray-500">Dedicated tracks for fitness and leisure.</p>
+                </div>
+
+                <!-- Amenity Card 4 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🧘</span>
+                    <p class="font-bold text-gray-800">Reflexology Path</p>
+                    <p class="text-sm text-gray-500">Therapeutic zone for relaxation.</p>
+                </div>
+
+                <!-- Amenity Card 5 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🛡️</span>
+                    <p class="font-bold text-gray-800">Secured RFID Access</p>
+                    <p class="text-sm text-gray-500">Automated, secure entry/exit system.</p>
+                </div>
+                
+                <!-- Amenity Card 6 -->
+                <div class="p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-lg transition duration-300">
+                    <span class="text-3xl text-indigo-500 mb-2 block">🌳</span>
+                    <p class="font-bold text-gray-800">Tropical Walk & Green Deck</p>
+                    <p class="text-sm text-gray-500">Lush landscaped open spaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GALLERY & VIDEOS SECTION -->
+    <section id="gallery" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="section-heading text-4xl font-extrabold text-gray-900 mb-4">Visual Tour: Gallery & Walkthroughs</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                A glimpse into the exquisite design and finished quality of SOBHA Infinia.
+            </p>
+            
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                
+                <!-- Image 1 -->
+                <div class="rounded-xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/292a43/ffffff?text=Exterior+Rendering" 
+                        alt="Exterior Rendering" class="w-full h-full object-cover aspect-[4/3] transform hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="rounded-xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/292a43/ffffff?text=Interior+View+Living" 
+                        alt="Interior View Living" class="w-full h-full object-cover aspect-[4/3] transform hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="rounded-xl shadow-xl overflow-hidden">
+                    <img src="https://placehold.co/600x400/292a43/ffffff?text=Amenities+View+Pool" 
+                        alt="Amenities View Pool" class="w-full h-full object-cover aspect-[4/3] transform hover:scale-105 transition duration-300">
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <h3 class="text-3xl font-bold text-gray-800 mt-10 mb-6">3D Walkthrough Video</h3>
+            <div class="max-w-4xl mx-auto rounded-xl shadow-2xl overflow-hidden">
+                <!-- Video Placeholder - Use an actual YouTube embed or a local video URL -->
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=xX_sRzYp1z7A_e8h" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- 7. LOCATION & CONTACT FOOTER SECTION -->
+    <section id="location" class="py-16 md:py-24 bg-indigo-700">
+        <div class="max-w-7xl mx-auto px-4 text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <!-- Location Details -->
+                <div class="lg:col-span-1 text-left">
+                    <h3 class="section-heading text-3xl font-extrabold mb-4 text-yellow-400 after:bg-yellow-400">Prime Connectivity</h3>
+                    <p class="text-lg mb-6 text-indigo-200">
+                        Located at **Jakkasandra Extension, Koramangala**, placing you at the heart of Bengaluru's most desirable social and commercial infrastructure.
+                    </p>
+                    <ul class="space-y-3 text-indigo-100 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-xl">🏢</span>
+                            <span>Proximity to Embassy Golf Links (EGL) and leading tech parks.</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-xl">🏫</span>
+                            <span>Close to top-tier schools and universities.</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-xl">🛍️</span>
+                            <span>Minutes from Forum Mall, Koramangala, and major shopping hubs.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Map Placeholder -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-3xl font-extrabold mb-4 text-white">Find Us on the Map</h3>
+                    <div class="bg-gray-800 h-64 rounded-xl shadow-2xl flex items-center justify-center text-indigo-300 text-xl font-semibold">
+                        [Google Maps Embed Placeholder]
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RERA and Footer Disclaimer -->
+            <div class="mt-12 pt-8 border-t border-indigo-600 text-center">
+                <p class="text-sm text-indigo-300">
+                    <strong class="text-yellow-400">RERA No.:</strong> PRM/KA/RERA/1251/446/PR/030824/006956 - PRM/KA/RERA/1251/446/PR/030824/006957 | <a href="http://www.rera.karnataka.gov.in" target="_blank" class="hover:underline">www.rera.karnataka.gov.in</a>
+                </p>
+                <p class="text-xs mt-2 text-indigo-400">&copy; 2025 SOBHA Infinia. All Rights Reserved. This is a conceptual representation.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Custom Alert Container -->
-    <div id="alertContainer" class="custom-alert hidden">
+    <div id="alertContainer" class="fixed top-10 right-10 z-50 transition-all duration-300">
         <!-- Alert content will be injected here -->
     </div>
 
     <!-- JavaScript for Form Submission -->
     <script>
-        // 🚨 CRITICAL: THIS IS YOUR LIVE GOOGLE APPS SCRIPT WEB APP URL
-        // It is now correctly set to the URL you provided.
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjwL1oLIArU4DQwC315eoyAcVRtIU2NvYsdyV1puDf8is9BHdlvNmtysuEqeHDKHcQ/exec';
+        // 🚨 CRITICAL: REPLACE THIS WITH YOUR LIVE GOOGLE APPS SCRIPT WEB APP URL
+        const SCRIPT_URL = ''; // Leave blank if testing locally, otherwise paste your script URL here.
         
         const form = document.getElementById('leadCaptureForm');
         const submitButton = document.getElementById('submitButton');
@@ -150,8 +344,6 @@
 
         /**
          * Utility function to show a custom success or error alert.
-         * @param {string} message - The message to display.
-         * @param {string} type - 'success' or 'error'.
          */
         function showCustomAlert(message, type) {
             const isSuccess = type === 'success';
@@ -176,20 +368,23 @@
                     </div>
                 </div>
             `;
-            alertContainer.classList.remove('hidden');
-            
             // Auto-hide the alert after 5 seconds
             setTimeout(() => {
-                alertContainer.classList.add('hidden');
+                alertContainer.innerHTML = '';
             }, 5000);
         }
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            if (!SCRIPT_URL) {
+                showCustomAlert('Registration is disabled. Please add a valid Google Apps Script URL.', 'error');
+                return;
+            }
             
             // Show loading state
             submitButton.disabled = true;
-            buttonText.textContent = 'Registering...';
+            buttonText.textContent = 'Submitting...';
             loadingSpinner.classList.remove('hidden');
 
             const formData = new FormData(form);
@@ -198,15 +393,14 @@
                 // Fetch request to the Google Apps Script Web App
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // Essential for Google Apps Script submissions
+                    mode: 'no-cors', 
                     cache: 'no-cache',
                     body: formData
                 });
 
-                // Since we use 'no-cors', we can't read the response body or status code directly.
-                // We assume success if the fetch operation itself doesn't throw an error.
+                // Assume success due to 'no-cors' mode
                 if (response) {
-                    showCustomAlert('Thank you! Your details are secured. We will contact you soon.', 'success');
+                    showCustomAlert('Success! Your details are secured. We will contact you soon.', 'success');
                     form.reset(); // Clear the form on successful submission
                 }
                 
@@ -216,7 +410,7 @@
             } finally {
                 // Hide loading state
                 submitButton.disabled = false;
-                buttonText.textContent = 'Register for Priority Access';
+                buttonText.textContent = 'Download Brochure & Price';
                 loadingSpinner.classList.add('hidden');
             }
         });
