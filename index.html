@@ -3,335 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOBHA Infinia: Ultra-Luxury Residences in Bengaluru</title>
-    <!-- Load Tailwind CSS -->
+    <title>SOBHA Infinia - Premium Residences</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome Icons for a Premium Look -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Custom Luxury Styling with Gold and Deep Indigo/Navy */
-        :root {
-            --color-primary: #1e3a8a; /* Deep Indigo */
-            --color-secondary: #d9b15c; /* Muted Gold/Brass */
-            --color-light: #f9fafb;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
         }
-
-        .bg-primary { background-color: var(--color-primary); }
-        .text-primary { color: var(--color-primary); }
-        .border-secondary { border-color: var(--color-secondary); }
-        .bg-secondary { background-color: var(--color-secondary); }
-        .text-secondary { color: var(--color-secondary); }
-        .hover\:bg-secondary:hover { background-color: #c4a169; }
-
-        /* Custom CTA Button Styling */
-        .cta-gold-fill {
-            @apply bg-secondary text-primary font-extrabold py-3 px-8 rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-secondary/50;
-        }
-        .cta-outline-white {
-            @apply border-2 border-white text-white font-semibold py-3 px-8 rounded-lg transition duration-300 hover:bg-white hover:text-primary;
-        }
-
-        /* Hero Background: Dark Overlay over the uploaded image */
+        /* Custom background style for the hero section using an accessible uploaded image */
         .hero-background {
-            /* Using the latest uploaded image as the main hero background */
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728');
+            /* *** PLACEHOLDER INSTRUCTION: Replace the URL below with your actual direct image link. ***
+               Example format for a direct link: url('https://your-username.github.io/repo/assets/hero-image.jpg'); 
+            */
+            background-image: url('https://github.com/sarathsanker25/sobha-insignia-landing-page/blob/30b05dfbb0e45d7b6f925865a7e6ad938a35534b/assets/SOBHA%20Infinia_BROCHURE_Web%20(1)-16.png'); 
             background-size: cover;
             background-position: center;
-        }
-
-        /* Responsive Video Container (16:9 Aspect Ratio) */
-        .video-container {
+            background-repeat: no-repeat;
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
-        .video-container video {
+        /* Overlay for better text readability */
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.45); /* Darker overlay */
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
         }
-
-        /* Feature Card Styling */
-        .feature-card {
-            @apply p-6 bg-white rounded-xl shadow-lg border-t-4 border-secondary transition duration-300 hover:shadow-2xl;
+        .hero-content {
+            position: relative;
+            z-index: 20;
+        }
+        /* Scroll to top button visibility */
+        .scroll-top-button {
+            transition: opacity 0.3s ease;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50">
+<body class="antialiased">
 
-    <!-- 1. Header & Navigation (Updated Menu) -->
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-top-button fixed bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg opacity-0" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="text-3xl font-extrabold text-primary">
-                SOBHA <span class="text-secondary">INFINIA</span>
-            </div>
-            <!-- Navigation Menu with all required CTAs/links -->
-            <nav class="hidden lg:flex space-x-6 text-gray-600 font-medium">
-                <a href="#contact" class="hover:text-primary transition duration-150 flex items-center"><i class="fas fa-book-open text-secondary mr-1"></i> DOWNLOAD BROCHURE</a>
-                <a href="#contact" class="hover:text-primary transition duration-150 flex items-center"><i class="fas fa-file-invoice-dollar text-secondary mr-1"></i> DOWNLOAD COST SHEET</a>
-                <a href="#gallery" class="hover:text-primary transition duration-150 flex items-center"><i class="fas fa-images text-secondary mr-1"></i> IMAGES</a>
-                <a href="#video-tour" class="hover:text-primary transition duration-150 flex items-center"><i class="fas fa-video text-secondary mr-1"></i> VIDEO TOUR</a>
-                <a href="#contact" class="cta-gold-fill text-sm py-2 px-4 flex items-center"><i class="fas fa-calendar-alt mr-2"></i> SCHEDULE A VISIT</a>
+            <div class="text-2xl font-extrabold text-red-600">SOBHA <span class="text-gray-900">Infinia</span></div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-red-600 font-medium transition duration-150">Home</a>
+                <a href="#gallery" class="text-gray-600 hover:text-red-600 font-medium transition duration-150">Gallery</a>
+                <a href="#amenities" class="text-gray-600 hover:text-red-600 font-medium transition duration-150">Amenities</a>
+                <a href="#location" class="text-gray-600 hover:text-red-600 font-medium transition duration-150">Location</a>
+                <a href="#contact" class="text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-medium transition duration-150 shadow-md">Enquire Now</a>
             </nav>
-            <!-- Mobile Menu Placeholder -->
-            <button class="lg:hidden text-primary text-2xl">
-                <i class="fas fa-bars"></i>
+            <button id="menuBtn" class="md:hidden text-gray-600 hover:text-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
             </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+            <a href="#gallery" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Gallery</a>
+            <a href="#amenities" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Amenities</a>
+            <a href="#location" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Location</a>
+            <a href="#contact" class="block px-4 py-2 text-white bg-red-600 hover:bg-red-700 m-4 rounded-lg text-center">Enquire Now</a>
         </div>
     </header>
 
     <main>
-        <!-- 2. Hero Section: High-Impact Headline and Lead Capture Form -->
-        <section id="contact" class="hero-background text-white min-h-screen flex items-center justify-center pt-24 pb-12">
-            <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Left Column: Headline and USP -->
-                <div class="text-left">
-                    <p class="text-lg uppercase tracking-widest mb-4 text-secondary font-semibold">Bengaluru's Premier Location</p>
-                    <h1 class="text-6xl md:text-7xl font-extrabold mb-6 leading-tight">
-                        <span class="block">SOBHA Infinia:</span>
-                        <span class="block mt-2 text-secondary">Ultra-Luxury Residences.</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl mb-10 font-light max-w-xl text-indigo-200">
-                        A curated collection of **3 & 4 BHK homes** in Jakkasandra Extension, Koramangala. Schedule your private viewing today.
-                    </p>
-                    
-                    <!-- Key Features in the Hero -->
-                    <div class="grid grid-cols-2 gap-4 max-w-lg">
-                        <div class="flex items-start">
-                            <i class="fas fa-home text-secondary text-2xl mr-3 mt-1"></i>
-                            <div>
-                                <p class="font-bold text-xl">3 & 4 BHK</p>
-                                <p class="text-sm text-indigo-300">Spacious Configurations</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-calendar-alt text-secondary text-2xl mr-3 mt-1"></i>
-                            <div>
-                                <p class="font-bold text-xl">Oct 31, 2025</p>
-                                <p class="text-sm text-indigo-300">Expected Handover</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Lead Capture Form -->
-                <div class="relative p-6 sm:p-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border-t-8 border-secondary">
-                    <h3 class="text-3xl font-extrabold text-primary mb-2 text-center">
-                        <i class="fas fa-hand-point-down mr-2 text-secondary"></i> GET ALL DOCUMENTS INSTANTLY
-                    </h3>
-                    <p class="text-center text-gray-600 mb-6 font-medium">Download Cost Sheet, Brochure & Floor Plans.</p>
-
-                    <form onsubmit="handleFormSubmission(event)">
-                        <div class="mb-4">
-                            <label for="f_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" id="f_name" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-primary shadow-sm" placeholder="Your Name">
-                        </div>
-                        <div class="mb-4">
-                            <label for="f_email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" id="f_email" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-primary shadow-sm" placeholder="you@example.com">
-                        </div>
-                        <div class="mb-6">
-                            <label for="f_phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" id="f_phone" required class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-primary shadow-sm" placeholder="+91 98765 43210">
-                        </div>
-                        
-                        <!-- Single combined CTA -->
-                        <button type="submit" class="w-full bg-primary text-white font-extrabold py-4 px-8 rounded-lg shadow-xl transition duration-300 hover:bg-primary/90">
-                            <i class="fas fa-cloud-download-alt mr-2"></i> DOWNLOAD DOCUMENTS & SCHEDULE CALL
-                        </button>
-                    </form>
-                    <p class="mt-4 text-xs text-center text-gray-500">
-                        By submitting, you agree to receive communications from SOBHA Sales Team.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Video Tour Section (Focus on touring) -->
-        <section id="video-tour" class="py-20 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-bold mb-4 text-primary">Project Walkthrough: The Grand Tour</h2>
-                <p class="text-xl text-gray-500 mb-10 max-w-3xl mx-auto">
-                    A cinematic look at the architecture, interiors, and world-class amenities of SOBHA Infinia.
+        <!-- Hero Section with Background Image -->
+        <section id="home" class="hero-background h-[70vh] sm:h-[80vh] flex items-center justify-center text-white rounded-b-xl shadow-2xl overflow-hidden">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center px-4 max-w-4xl">
+                <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+                    SOBHA Infinia: <span class="text-red-400">Luxury Redefined</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-light mb-8 max-w-2xl mx-auto">
+                    A collection of premium 3 & 4 BHK residences located in the heart of Bengaluru's prime corridor.
                 </p>
-
-                <div class="max-w-4xl mx-auto">
-                    <!-- SOURCE: Using the uploaded video ID. Assuming mp4 format. -->
-                    <div class="video-container">
-                         <video controls poster="uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728">
-                            <source src="uploaded:image_a0a2af.png-99c1da01-76c9-4180-ac75-91399ba912a5" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-
-                <a href="#contact" class="inline-block mt-10 cta-gold-fill">
-                    <i class="fas fa-calendar-check mr-2"></i> Schedule A Personalised Virtual Tour
-                </a>
-            </div>
-        </section>
-        
-        <!-- 4. Image Gallery / Gallery Section (UPDATED: Using specific uploaded image IDs) -->
-        <section id="gallery" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-center mb-4 text-primary">A Visual Experience: Project Images</h2>
-                <p class="text-xl text-center text-gray-500 mb-12 max-w-3xl mx-auto">
-                    View high-resolution renders of the project's exquisite interiors and expansive common spaces.
-                </p>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Image Card 1: Exterior (Latest Upload) -->
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="uploaded:image_a113e0.png-547ab8f5-1a0f-458f-8ad0-b581c878c728" alt="Project Exterior View" class="w-full h-48 object-cover">
-                        <div class="p-4 bg-gray-50">
-                            <p class="font-semibold text-primary">Grand Facade</p>
-                            <p class="text-sm text-gray-500">The iconic SOBHA design language.</p>
-                        </div>
-                    </div>
-                    <!-- Image Card 2: Living Room (Image ID 2) -->
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="uploaded:image_a09425.png-85c04261-49ba-4b06-8738-98bfaff0418a" alt="Luxury Living Room Interior" class="w-full h-48 object-cover">
-                        <div class="p-4 bg-gray-50">
-                            <p class="font-semibold text-primary">Living Area</p>
-                            <p class="text-sm text-gray-500">Unmatched spatial elegance.</p>
-                        </div>
-                    </div>
-                    <!-- Image Card 3: Amenities (Image ID 3) -->
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="uploaded:image_a09ee7.png-9a54a7f0-6f04-407c-acb5-4d02b8661c01" alt="Rooftop Swimming Pool" class="w-full h-48 object-cover">
-                        <div class="p-4 bg-gray-50">
-                            <p class="font-semibold text-primary">Infinity Pool</p>
-                            <p class="text-sm text-gray-500">The perfect retreat high above the city.</p>
-                        </div>
-                    </div>
-                    <!-- Image Card 4: View (Image ID 4) -->
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                        <img src="uploaded:image_a09aed.png-61cda40e-45ba-43b7-b05f-357b989cc1e8" alt="Apartment Balcony View" class="w-full h-48 object-cover">
-                        <div class="p-4 bg-gray-50">
-                            <p class="font-semibold text-primary">Expansive Balcony</p>
-                            <p class="text-sm text-gray-500">Private outdoor spaces with stunning views.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="#contact" class="inline-block cta-gold-fill">
-                        <i class="fas fa-images mr-2"></i> View Full Gallery & Floor Plans
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                        View Floor Plans
+                    </a>
+                    <a href="#amenities" class="bg-white text-red-600 hover:text-red-700 font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-xl">
+                        Explore Amenities
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Configurations & Floor Plans Section -->
-        <section id="plans" class="py-20 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-center mb-4 text-primary">Exclusive Residential Configurations</h2>
-                <p class="text-xl text-center text-gray-500 mb-12 max-w-3xl mx-auto">
-                    Spacious 3 & 4 BHK units with superior materials and intelligent layouts.
-                </p>
+        <!-- Project Overview Section -->
+        <section class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <div class="text-red-600 text-4xl font-extrabold">3 & 4 BHK</div>
+                    <p class="text-gray-600 mt-2">Premium Residences</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <div class="text-red-600 text-4xl font-extrabold">1800+</div>
+                    <p class="text-gray-600 mt-2">Sq. Ft. Area</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-[1.02] transition duration-300">
+                    <div class="text-red-600 text-4xl font-extrabold">Prime Location</div>
+                    <p class="text-gray-600 mt-2">Sarjapur-Marathahalli Road</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Gallery & Video Walkthrough Section - Placeholder Ready -->
+        <section id="gallery" class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Virtual Walkthrough & Project Gallery</h2>
+                
+                <!-- Video Player Placeholder -->
+                <div class="mb-12 shadow-2xl rounded-xl overflow-hidden aspect-video">
+                    <video 
+                        controls 
+                        poster="https://placehold.co/1280x720/FBBF24/000000?text=Project+Walkthrough+Video"
+                        class="w-full h-full object-cover bg-gray-300"
+                    >
+                        <!-- 
+                            *** PLACEHOLDER INSTRUCTION: Replace the 'src' attribute below with your direct video URL (e.g., walkthrough.mp4). ***
+                            Ensure you provide a direct link (e.g., from GitHub Pages or a CDN).
+                        -->
+                        <source src="https://github.com/sarathsanker25/sobha-insignia-landing-page/blob/30b05dfbb0e45d7b6f925865a7e6ad938a35534b/assets/SOBHA-Brand-Video-Audio_1.mp4" type="video/mp4">
+                        Your browser does not support the video tag. Please contact us for a private viewing.
+                    </video>
+                </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Configuration Card 1: 3 BHK (Updated with actual floor plan snippet) -->
-                    <div class="feature-card">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-bed mr-3 text-secondary"></i> 3 BHK Luxury (Type Q2)</h3>
-                        <p class="text-gray-600 mb-4">Ideal for modern families, offering optimal space utilization and privacy.</p>
-                        <ul class="text-sm space-y-2 font-medium text-gray-700">
-                            <li><i class="fas fa-ruler-combined mr-2 text-secondary/70"></i> **SBA:** 2,056 sq. ft. onwards</li>
-                            <li><i class="fas fa-door-open mr-2 text-secondary/70"></i> **Key Feature:** Home office enabled bedroom provision.</li>
-                        </ul>
-                         <!-- Using Floor Plan Snippet from uploaded PDF -->
-                         <img src="uploaded:SOBHA Infinia_FLOOR PLANS (1) (1).pdf:Image 15" alt="3 BHK Type Q2 Floor Plan" class="mt-6 rounded-md w-full border border-gray-300 shadow-md">
+                <!-- Image Gallery Placeholder -->
+                <h3 class="text-3xl font-bold text-gray-800 text-center mb-8 mt-16">Key Interior Renders</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Image 1 -->
+                    <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <!-- *** PLACEHOLDER INSTRUCTION: Replace the 'src' attribute with your interior image link *** -->
+                        <img src="https://github.com/sarathsanker25/sobha-insignia-landing-page/blob/main/assets/SOBHA%20Infinia_BROCHURE_Web%20(1)-16.png" alt="Luxury Living Area" class="w-full h-auto object-cover">
                     </div>
-
-                    <!-- Configuration Card 2: 4 BHK + DH Room (Updated with actual floor plan snippet) -->
-                    <div class="feature-card">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-home mr-3 text-secondary"></i> 4 BHK + DH Room</h3>
-                        <p class="text-gray-600 mb-4">The pinnacle of ultra-luxury with dedicated space for the discerning few.</p>
-                        <ul class="text-sm space-y-2 font-medium text-gray-700">
-                            <li><i class="fas fa-ruler-combined mr-2 text-secondary/70"></i> **SBA:** 3,264 sq. ft. onwards</li>
-                            <li><i class="fas fa-building mr-2 text-secondary/70"></i> **Key Feature:** Double Height (DH) Room for maximum grandeur.</li>
-                        </ul>
-                         <!-- Using Floor Plan Snippet from uploaded PDF -->
-                         <img src="uploaded:SOBHA Infinia_FLOOR PLANS (1) (1).pdf:Image 1" alt="4 BHK Floor Plan" class="mt-6 rounded-md w-full border border-gray-300 shadow-md">
+                    <!-- Image 2 -->
+                    <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <!-- *** PLACEHOLDER INSTRUCTION: Replace the 'src' attribute with your bedroom image link *** -->
+                        <img src="https://github.com/sarathsanker25/sobha-insignia-landing-page/blob/main/assets/SOBHA%20Infinia_BROCHURE_Web%20(1)-18.png" alt="Master Bedroom" class="w-full h-auto object-cover">
                     </div>
-
-                    <!-- Configuration Card 3: Pricing & Handover -->
-                    <div class="feature-card">
-                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center"><i class="fas fa-calendar-check mr-3 text-secondary"></i> Investment Timeline</h3>
-                        <p class="text-gray-600 mb-4">Essential project and financial timelines for your investment planning.</p>
-                        <ul class="text-sm space-y-2 font-medium text-gray-700">
-                            <li><i class="fas fa-hand-holding-box mr-2 text-secondary/70"></i> **Expected Handover:** Oct 31, 2025</li>
-                            <li><i class="fas fa-money-check-alt mr-2 text-secondary/70"></i> **Starting Value:** ~$5.26 Cr.</li>
-                        </ul>
-                        <div class="mt-6">
-                            <a href="#contact" class="inline-block cta-gold-fill text-sm">
-                                <i class="fas fa-tag mr-2"></i> Request Detailed Price List
-                            </a>
-                        </div>
+                    <!-- Image 3 -->
+                    <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <!-- *** PLACEHOLDER INSTRUCTION: Replace the 'src' attribute with your kitchen image link *** -->
+                        <img src="https://github.com/sarathsanker25/sobha-insignia-landing-page/blob/main/assets/SOBHA%20Infinia_BROCHURE_Web%20(1)-17.png" alt="Gourmet Kitchen" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6. Mock Confirmation Modal -->
-        <div id="confirmation-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-[9999]" onclick="closeModal()">
-            <div class="bg-white p-8 rounded-xl shadow-2xl max-w-lg w-full m-4" onclick="event.stopPropagation()">
-                <h3 class="text-3xl font-bold text-primary mb-4 flex items-center">
-                    <i class="fas fa-check-circle text-secondary text-4xl mr-3"></i> Request Sent Successfully!
-                </h3>
-                <p class="text-lg text-gray-600 mb-6">
-                    Thank you for your interest in **SOBHA Infinia**.
-                </p>
-                <p class="text-md text-gray-700 mb-6">
-                    We have instantly emailed the **Cost Sheet** and **Brochure** to the address provided. A dedicated sales manager will call you shortly to assist with your private site visit appointment.
-                </p>
-                <button onclick="closeModal()" class="w-full bg-secondary text-primary font-bold py-3 rounded-lg hover:bg-secondary/80 transition">
-                    Close
-                </button>
+        <!-- Amenities Section -->
+        <section id="amenities" class="bg-gray-100 py-16 rounded-t-3xl shadow-inner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">World-Class Amenities</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Amenity Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <svg class="w-12 h-12 text-red-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.836 2.582a10.03 10.03 0 01-15.836 2.582M14.5 13H17m-2.5 0a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Grand Clubhouse</h3>
+                        <p class="text-gray-600">A sprawling community space for leisure and social gatherings.</p>
+                    </div>
+                    <!-- Amenity Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <svg class="w-12 h-12 text-red-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Swimming Pool</h3>
+                        <p class="text-gray-600">Temperature-controlled pool for year-round recreation.</p>
+                    </div>
+                    <!-- Amenity Card 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                        <svg class="w-12 h-12 text-red-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Landscaped Gardens</h3>
+                        <p class="text-gray-600">Lush green spaces designed for tranquility and relaxation.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">Strategically Located</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-lg text-gray-700 mb-6">
+                    SOBHA Infinia offers unmatched connectivity being situated right off the Sarjapur-Marathahalli Road, placing you minutes away from major IT hubs, premium educational institutions, and healthcare facilities.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-red-600 mb-3">Key Highlights:</h3>
+                        <ul class="space-y-3 text-gray-700 list-disc list-inside">
+                            <li>Proximity to Outer Ring Road (ORR)</li>
+                            <li>Close to Whitefield and Electronic City</li>
+                            <li>Easy access to Wipro Corporate Office and Embassy TechVillage</li>
+                            <li>Surrounded by top schools and hospitals</li>
+                        </ul>
+                    </div>
+                    <div class="h-64 bg-gray-200 rounded-lg overflow-hidden shadow-inner">
+                        <!-- Placeholder for Map/Location Visual -->
+                        <iframe 
+                            class="w-full h-full border-0"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://maps.google.com/maps?q=SOBHA%20Infinia,%20Sarjapur-Marathahalli%20Road,%20Bengaluru&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Enquiry Section -->
+        <section id="contact" class="bg-red-600 py-16 rounded-t-3xl text-white shadow-2xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">Book Your Site Visit</h2>
+                <p class="text-xl font-light mb-8">
+                    Discover your future home. Fill out the form below and our sales team will contact you shortly.
+                </p>
+                <div class="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-2xl text-gray-900">
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="space-y-4">
+                            <input type="text" id="name" placeholder="Full Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition duration-150">
+                            <input type="email" id="email" placeholder="Email Address" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition duration-150">
+                            <input type="tel" id="phone" placeholder="Phone Number" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition duration-150">
+                            <select id="unit" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500 transition duration-150">
+                                <option value="">Select Unit Type Interested</option>
+                                <option value="3BHK">3 BHK Residences</option>
+                                <option value="4BHK">4 BHK Residences</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition duration-300 transform hover:scale-[1.01]">
+                            Submit Enquiry
+                        </button>
+                    </form>
+                    <div id="formMessage" class="mt-4 text-sm font-medium hidden"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-            <p class="text-sm">&copy; 2025 SOBHA Infinia. All rights reserved.</p>
-            <p class="text-xs mt-2">Disclaimer: RERA: PRM/KA/RERA/1251/446/PR/030824/006956-6957. The content is conceptual; please verify all details with the Company before relying upon the same.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <div class="text-xl font-bold mb-1">SOBHA Infinia</div>
+                <p class="text-sm text-gray-400">Sarjapur-Marathahalli Road, Bengaluru</p>
+                <p class="text-xs text-gray-500 mt-1">PRM/KA/RERA/1251/446/PR/030824/006956 | www.rera.karnataka.gov.in</p>
+            </div>
+            <p class="text-sm text-gray-500">&copy; 2025 SOBHA Developers. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Form and Modal (Mock Functionality) -->
     <script>
-        function handleFormSubmission(event) {
-            event.preventDefault(); 
-            // In a real application, this is where you would send the data to a server (e.g., Firestore or a CRM).
+        // --- JavaScript for Interactions ---
 
-            // Since we cannot use alert(), we show a custom modal instead.
-            document.getElementById('confirmation-modal').classList.remove('hidden');
-            document.getElementById('confirmation-modal').classList.add('flex');
+        // Mobile Menu Toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            // Clear the form fields after successful (mock) submission
+        // Scroll Top Button Logic
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove('opacity-0');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission Handler (Using a custom message box instead of alert/confirm)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formMessage = document.getElementById('formMessage');
+            
+            // In a real application, you would send this data to a server/CRM
+            const name = document.getElementById('name').value;
+            const unit = document.getElementById('unit').value;
+
+            // Display a custom success message
+            formMessage.innerHTML = `Thank you, <span class="font-bold">${name}</span>! Your enquiry for the ${unit || 'selected'} unit type has been successfully submitted. We'll be in touch soon.`;
+            formMessage.classList.remove('hidden', 'text-gray-900', 'text-red-600');
+            formMessage.classList.add('text-green-600');
+
+            // Clear the form after a simulated submission
             event.target.reset();
-        }
 
-        function closeModal() {
-            document.getElementById('confirmation-modal').classList.add('hidden');
-            document.getElementById('confirmation-modal').classList.remove('flex');
+            // Hide the message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
         }
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Offset for fixed header
+                    const headerOffset = 70; 
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
             });
         });
     </script>
