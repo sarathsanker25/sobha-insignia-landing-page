@@ -55,13 +55,15 @@
         .scroll-top-button {
             transition: opacity 0.3s ease;
         }
-        /* Aspect ratio container for the YouTube iframe (16:9) */
+        
+        /* Aspect ratio container for the video (16:9) */
         .aspect-video-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
-        .aspect-video-wrapper iframe {
+        .aspect-video-wrapper iframe,
+        .aspect-video-wrapper video {
             position: absolute;
             top: 0;
             left: 0;
@@ -203,16 +205,24 @@
                 <div class="max-w-7xl mx-auto">
                     <h2 class="text-4xl font-extrabold text-white text-center mb-12">Virtual Walkthrough & Project Gallery</h2>
                     
-                    <!-- YouTube Video Embed -->
+                    <!-- HTML5 VIDEO ELEMENT REPLACEMENT -->
                     <div class="mb-12 shadow-2xl rounded-xl overflow-hidden aspect-video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/H7Peenn72V4?rel=0" 
-                            title="SOBHA Infinia Walkthrough" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <video 
+                            id="projectVideo"
+                            controls 
+                            autoplay 
+                            muted
+                            loop
+                            class="w-full h-full object-cover"
+                            poster="https://placehold.co/1280x720/27272A/ffffff?text=Video+Loading+SOBHA+Infinia+Walkthrough">
+                            
+                            <!-- CORRECTED SRC URL BELOW: changed '-' to '_' -->
+                            <source src="https://raw.githubusercontent.com/sarathsanker25/sobha-insignia-landing-page/main/assets/SOBHA-Brand-Video-Audio_1.mp4" type="video/mp4">
+                            
+                            Your browser does not support the video tag. Please update your browser.
+                        </video>
                     </div>
+                    <!-- END HTML5 VIDEO ELEMENT -->
 
                     <!-- Image Gallery -->
                     <h3 class="text-3xl font-bold text-white text-center mb-8 mt-16">Key Interior Renders</h3>
