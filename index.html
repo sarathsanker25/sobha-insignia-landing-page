@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOBHA Insignia: Smart Luxury Living Near Bellandur</title>
     
+    <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Inter Font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon Placeholder -->
     <link rel="icon" type="image/png" href="/favicon.png"> 
 
     <style>
@@ -25,7 +30,7 @@
             }
         }
 
-        /* --- GRADIENT BODY BACKGROUND --- */
+        /* --- GRADIENT BODY BACKGROUND (Key for aesthetics) --- */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #141418;
@@ -33,7 +38,7 @@
             background-attachment: fixed;
         }
         
-        /* --- HERO STYLES (Unchanged) --- */
+        /* --- HERO STYLES --- */
         .hero-content-wrapper {
             position: relative;
             z-index: 20;
@@ -72,7 +77,7 @@
             color: transparent;
         }
         
-        /* Custom Arrow/Highlight for Select Dropdowns */
+        /* Custom Arrow/Highlight for Select Dropdowns (Requested highlight for text) */
         select.custom-arrow {
             /* Ensures custom arrow is visible and points down */
             background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC72C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -96,7 +101,7 @@
         .aspect-video-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; 
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
         .aspect-video-wrapper iframe,
         .aspect-video-wrapper video {
@@ -121,15 +126,18 @@
 </head>
 <body class="antialiased">
 
+    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-top-button btn-gradient-gold fixed bottom-4 right-4 text-cta-text p-3 rounded-full shadow-lg opacity-0 z-50" aria-label="Scroll to top">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </button>
 
+    <!-- Header/Navigation -->
     <header class="bg-surface-light shadow-xl sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <h1 class="flex items-center space-x-2">            
+                <!-- Logo Image (Placeholder fallback included for safety) -->
                 <img 
                     src="https://raw.githubusercontent.com/sarathsanker25/sobha-insignia-landing-page/refs/heads/main/assets/LOGO.png" 
                     alt="SOBHA Insignia Logo - Homepage" 
@@ -157,17 +165,23 @@
         </nav>
     </header>
     
+    <!-- Main Content Area -->
     <div class="main-content-area">
         <main>
+            <!-- ====== FULL-BLEED HERO SLIDER SECTION (Updated images per request 3) ====== -->
             <section id="home" class="relative min-h-[85vh] flex items-center justify-start text-white overflow-hidden rounded-b-xl shadow-2xl">
                 
+                <!-- 1. Slider (as background) - Uses requested images -->
                 <figure id="hero-slider" class="absolute top-0 left-0 w-full h-full z-0" role="region" aria-label="Project Gallery">
+                    <!-- Slider Track -->
                     <div id="slider-track" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+                        <!-- Slide 1: Entrance Lobby (Requested Image) -->
                         <div id="slide-1" class="min-w-full h-full" role="tabpanel" aria-label="Slide 1 of 2">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-entranceLobby.webp" 
                                  alt="Grand Entrance Lobby of SOBHA Insignia" 
                                  class="w-full h-full object-cover">
                         </div>
+                        <!-- Slide 2: Pool View (Requested Image) -->
                         <div id="slide-2" class="min-w-full h-full" role="tabpanel" aria-label="Slide 2 of 2">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/signia-pool.webp" 
                                  alt="View of the luxurious swimming pool at SOBHA Insignia" 
@@ -176,15 +190,19 @@
                     </div>
                 </figure>
 
+                <!-- 2. Dark Overlay (for text readability) -->
                 <div class="absolute top-0 left-0 w-full h-full bg-primary-base/60 z-5"></div>
 
+                <!-- 3. Text Content (on top) -->
                 <div class="hero-content-wrapper relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                    <div class="max-w-3xl text-left py-12"> <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6 lg:pr-10">
+                    <div class="max-w-3xl text-left py-12"> <!-- Constrained width for readability -->
+                        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6 lg:pr-10">
                             SOBHA Insignia: <span class="text-gradient-gold">Smart Luxury Living</span>
                         </h1>
                         <p class="text-lg sm:text-xl font-light mb-8 max-w-xl text-zinc-300">
                             A collection of premium 3, 3.5 & 4 BHK residences located in Bengaluru, Near Bellandur.
                         </p>
+                        <!-- CTA for Download Brochure -->
                         <div class="flex flex-col sm:flex-row justify-start gap-4 mt-8">
                             <button onclick="openDownloadModal('Brochure', 'https://placeholder.com/brochure-url', 'BrochureDownload', false)"
                                     class="btn-gradient-gold text-cta-text font-bold py-3 px-8 rounded-xl flex items-center justify-center">
@@ -195,6 +213,7 @@
                     </div>
                 </div>
 
+                <!-- 4. Slider Controls (on top) -->
                 <button id="slider-prev" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 p-2 rounded-full transition-colors">
                     <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
@@ -202,23 +221,31 @@
                     <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
                 <div id="slider-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex space-x-2" role="tablist" aria-label="Image selection">
-                    </div>
+                    <!-- Dots are generated by JavaScript -->
+                </div>
 
             </section>
+            <!-- ====== END HERO SECTION ====== -->
+
+
+            <!-- SECTION: Floor Plans, Master Plan & Pricing CTAs -->
             <section id="floor-pricing" class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-4xl font-extrabold text-white text-center mb-6">Explore Detailed Plans & Pricing</h2>
                 <p class="text-zinc-300 mb-10 max-w-3xl mx-auto">Access unit layouts, master layout, and transparent pricing information instantly by clicking the buttons below.</p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <!-- CTA for Floor Plan Download (Requires Unit Type Selection in Modal) -->
                     <button onclick="openDownloadModal('Floor Plans', 'https://placeholder.com/floor-plans-url', 'FloorPlansDownload', true)" 
                             class="btn-ghost-gold font-bold py-3 px-6 rounded-xl flex items-center justify-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                         **Select & Download Floor Plans**
                     </button>
+                    <!-- CTA for Master Plan -->
                     <button onclick="openDownloadModal('Master Plan', 'https://placeholder.com/master-plan-url', 'MasterPlanDownload', false)" 
                             class="btn-ghost-gold font-bold py-3 px-6 rounded-xl flex items-center justify-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                         **Download Master Plan**
                     </button>
+                    <!-- CTA for Pricing -->
                     <button onclick="openDownloadModal('Price Details', 'https://placeholder.com/price-details-url', 'PriceDetailsDownload', false)" 
                             class="btn-ghost-gold font-bold py-3 px-6 rounded-xl flex items-center justify-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -227,22 +254,26 @@
                 </div>
             </section>
 
+            <!-- SECTION: Project Overview -->
             <section id="project-overview" class="bg-surface-dark py-16 px-4 sm:px-6 lg:px-8">
                  <div class="max-w-7xl mx-auto">
                     <h2 class="text-4xl font-extrabold text-white text-center mb-12">Project Overview: Key Features</h2>
                     <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Overview Image 1: Elevation Day View -->
                         <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-elevation-day.webp" 
                                  alt="Facade View of SOBHA Insignia" 
                                  class="w-full h-auto object-cover">
                             <div class="p-4 bg-surface-light text-center"><p class="text-white font-semibold">Stunning Architecture</p></div>
                         </div>
+                        <!-- Overview Image 2: Lobby View -->
                         <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-entranceLobby.webp" 
                                  alt="Grand Entrance Lobby" 
                                  class="w-full h-auto object-cover">
                             <div class="p-4 bg-surface-light text-center"><p class="text-white font-semibold">Grand Entrance Lobby</p></div>
                         </div>
+                        <!-- Overview Image 3: Entrance Plaza View -->
                         <div class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-Entrance Plaza-Lwebp" 
                                  alt="Entrance Plaza" 
@@ -253,11 +284,13 @@
                 </div>
             </section>
 
+            <!-- SECTION: Project Gallery & Video Walkthrough -->
             <section id="media-gallery" class="bg-surface-dark py-16 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-7xl mx-auto">
                     <h2 class="text-4xl font-extrabold text-white text-center mb-12">Virtual Walkthrough & Media Gallery</h2>
                     
                     <figure class="mb-12 shadow-2xl rounded-xl overflow-hidden aspect-video-wrapper">
+                        <!-- Video Walkthrough URL -->
                         <video 
                             id="projectVideo"
                             controls 
@@ -274,18 +307,21 @@
 
                     <h3 class="text-3xl font-bold text-white text-center mb-8 mt-16">Key Interior Renders</h3>
                     <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Interior Render 1: Living Room -->
                         <figure class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-living-room.webp" 
                                  alt="Luxury Living Area" 
                                  class="w-full h-auto object-cover">
                             <figcaption class="sr-only">Luxury Living Area interior render.</figcaption>
                         </figure>
+                        <!-- Interior Render 2: Bed Room -->
                         <figure class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-bed.webp" 
                                  alt="Master Bedroom" 
                                  class="w-full h-auto object-cover">
                             <figcaption class="sr-only">Master Bedroom interior render.</figcaption>
                         </figure>
+                        <!-- Interior Render 3: Bathroom -->
                         <figure class="shadow-lg rounded-xl overflow-hidden transform hover:scale-[1.03] transition duration-300">
                             <img src="https://www.sobha.com/wp-content/uploads/2022/09/insignia-bathroomv3.webp" 
                                  alt="Gourmet Kitchen" 
@@ -296,6 +332,7 @@
                 </div>
             </section>
             
+            <!-- SECTION: Project Highlights -->
             <section id="project-highlights" class="bg-surface-light py-16 rounded-b-3xl shadow-inner">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 class="text-4xl font-extrabold text-white text-center mb-12">Design & Quality Highlights</h2>
@@ -319,6 +356,7 @@
                 </div>
             </section>
 
+            <!-- SECTION: Location -->
             <section id="location" class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-extrabold text-white text-center mb-12">Strategically Located Near Bellandur</h2>
                 <div class="bg-surface-dark p-8 rounded-xl shadow-lg">
@@ -336,6 +374,7 @@
                             </ul>
                         </div>
                         <div class="h-64 bg-zinc-700 rounded-lg overflow-hidden shadow-inner">
+                            <!-- Google Maps Embed -->
                             <iframe 
                                 title="Project Location Map"
                                 class="w-full h-full border-0"
@@ -349,6 +388,7 @@
                 </div>
             </section>
 
+            <!-- SECTION: Contact/Enquiry -->
             <section id="contactFormWrapper" class="bg-surface-light py-16 rounded-t-3xl text-white shadow-2xl">
                 <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="text-4xl font-extrabold mb-4">Book Your Site Visit</h2>
@@ -356,6 +396,7 @@
                         Discover your future home. Fill out the form below and our sales team will contact you shortly.
                     </p>
                     <div class="bg-surface-dark p-8 rounded-xl shadow-2xl text-white">
+                        <!-- IMPORTANT: Replace the action URL below with your actual Google Form Script URL if deploying -->
                         <form id="mobileTabletContactForm" method="POST" action="https://script.google.com/macros/s/AKfycbz0mlBfIbsgBEub9_Jx6TL3F4osLUP3yg_gd95ACQNal66ak3CDmxcHZLg_n_r_J1O6/exec">
                             <div class="space-y-4">
                                 <div class="relative">
@@ -370,6 +411,7 @@
                                     <label for="mobile_phone" class="sr-only">Phone Number</label>
                                     <input type="tel" name="Phone" id="mobile_phone" placeholder="Phone Number" required class="w-full px-4 py-3 border border-zinc-700 bg-surface-dark text-white rounded-lg focus:ring-accent-gold focus:border-accent-gold transition duration-150">
                                 </div>
+                                <!-- Unit Type Selection (Highlighted text as requested) -->
                                 <select name="UnitType" id="mobile_unittype" class="w-full px-4 py-3 border border-zinc-700 bg-surface-dark rounded-lg focus:ring-accent-gold focus:border-accent-gold transition duration-150 appearance-none custom-arrow">
                                     <option value="">**Choose Your Type**</option>
                                     <option value="3BHK">3 BHK Residences</option>
@@ -388,6 +430,7 @@
             </section>
         </main>
 
+        <!-- Footer -->
         <footer class="bg-primary-base text-white py-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="mb-4">
@@ -399,6 +442,9 @@
             </div>
         </footer>
     </div>
+    <!-- END .main-content-area -->
+
+    <!-- Download Modal Structure (Completely client-side, using JS to toggle visibility) -->
     <div id="downloadModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden p-4" aria-modal="true" role="dialog">
         <div class="bg-surface-dark p-8 rounded-xl shadow-2xl max-w-sm w-full relative transform transition-all duration-300 scale-95 opacity-0 text-white" id="modalContent">
             
@@ -409,6 +455,7 @@
             <h3 id="modalTitle" class="text-2xl font-bold text-center mb-2 text-gradient-gold">Access Document</h3>
             <p class="text-sm text-center text-zinc-400 mb-6">Please provide your details to instantly **download** the <span id="documentNamePlaceholder" class="font-semibold text-accent-gold">Document</span>.</p>
 
+            <!-- IMPORTANT: Replace the action URL below with your actual Google Form Script URL if deploying -->
             <form id="downloadContactForm" method="POST" action="https://script.google.com/macros/s/AKfycbz0mlBfIbsgBEub9_Jx6TL3F4osLUP3yg_gd95ACQNal66ak3CDmxcHZLg_n_r_J1O6/exec">
                 <div class="space-y-4">
                     <div class="relative">
@@ -420,6 +467,7 @@
                         <input type="tel" name="Phone" id="modal_phone" placeholder="Phone Number" required class="w-full px-4 py-3 border border-zinc-700 bg-surface-dark text-white rounded-lg focus:ring-accent-gold focus:border-accent-gold transition duration-150">
                     </div>
                     
+                    <!-- Unit Type Selection for Floor Plans (Highlighted text as requested) -->
                     <select name="UnitType" id="modal_unittype_download" class="w-full px-4 py-3 border border-zinc-700 bg-surface-dark rounded-lg focus:ring-accent-gold focus:border-accent-gold transition duration-150 appearance-none custom-arrow hidden">
                         <option value="">**Choose Your Type**</option>
                         <option value="3BHK">3 BHK Floor Plan</option>
@@ -438,6 +486,9 @@
             <div id="downloadFormMessage" class="mt-4 text-sm font-medium hidden text-center"></div>
         </div>
     </div>
+    <!-- END Download Modal Structure -->
+
+
     <script>
         // --- JavaScript for Interactions ---
 
@@ -462,7 +513,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // --- Hero Slider Logic (Adjusted for 2 slides) ---
+        // --- Hero Slider Logic (Optimized for 2 slides) ---
         document.addEventListener('DOMContentLoaded', () => {
             const sliderTrack = document.getElementById('slider-track');
             if (!sliderTrack) return; 
@@ -473,9 +524,9 @@
             const dotsContainer = document.getElementById('slider-dots');
 
             let currentSlide = 0;
-            const slideCount = slides.length; // Now 2
+            const slideCount = slides.length; // Expected 2
 
-            // Create dots (Adjusted for 2 dots)
+            // Create dots
             slides.forEach((slide, index) => {
                 const button = document.createElement('button');
                 button.setAttribute('role', 'tab');
@@ -500,7 +551,7 @@
             const dots = Array.from(dotsContainer.children);
 
             const goToSlide = (slideIndex) => {
-                // Clamp index
+                // Circular navigation logic
                 if (slideIndex < 0) slideIndex = slideCount - 1;
                 if (slideIndex >= slideCount) slideIndex = 0;
 
@@ -537,7 +588,7 @@
         });
 
 
-        // --- MODAL FUNCTIONS (Updated to handle Unit Type) ---
+        // --- MODAL FUNCTIONS ---
         /**
          * Opens the download modal with dynamic content and optional unit type selection.
          * @param {string} docName - The name of the document to be displayed in the modal.
@@ -555,19 +606,16 @@
             document.getElementById('modalTitle').textContent = `Access ${docName}`;
             document.getElementById('ActionType').value = actionType;
             document.getElementById('DownloadURL').value = downloadUrl;
-
-            // Handle Unit Type Select visibility
+            
+            // Handle Unit Type Select visibility for Floor Plans
             if (requiresUnitType) {
                 unitTypeSelect.classList.remove('hidden');
                 unitTypeSelect.setAttribute('required', 'true');
-                // Ensure the placeholder is selected on open
-                unitTypeSelect.value = ""; 
-                // Set the correct custom text for the placeholder
-                unitTypeSelect.querySelector('option[value=""]').textContent = "**Choose Your Type**";
+                unitTypeSelect.value = ""; // Reset to placeholder
             } else {
                 unitTypeSelect.classList.add('hidden');
                 unitTypeSelect.removeAttribute('required');
-                unitTypeSelect.value = "NA"; // Set a default value for non-floorplan requests
+                unitTypeSelect.value = "NA"; 
             }
 
             modal.classList.remove('hidden');
@@ -591,7 +639,7 @@
                 document.getElementById('downloadContactForm').reset();
                 document.getElementById('downloadFormMessage').classList.add('hidden');
                 document.getElementById('downloadFormMessage').classList.remove('text-green-500', 'text-red-500');
-                // Hide unit type selection and remove required attribute on close
+                // Ensure unit type selection is reset on close
                 document.getElementById('modal_unittype_download').classList.add('hidden');
                 document.getElementById('modal_unittype_download').removeAttribute('required');
             }, 300);
@@ -609,16 +657,19 @@
         const downloadFormElement = document.getElementById('downloadContactForm');
         if (downloadFormElement) {
             downloadFormElement.addEventListener('submit', function (event) {
+                event.preventDefault(); 
                 const unitTypeSelect = document.getElementById('modal_unittype_download');
                 
-                // Custom validation for Floor Plan download
+                // Custom validation for Floor Plan download (if visible)
                 if (!unitTypeSelect.classList.contains('hidden') && unitTypeSelect.value === "") {
-                    alert("Please select a Unit Type before downloading the Floor Plans.");
-                    event.preventDefault();
+                    // Using custom message box instead of alert()
+                    const formMessage = document.getElementById('downloadFormMessage');
+                    formMessage.innerHTML = `<span class="font-bold text-accent-gold">Oops!</span> Please choose a Unit Type.`;
+                    formMessage.classList.remove('hidden', 'text-green-500');
+                    formMessage.classList.add('text-red-500');
                     return;
                 }
 
-                event.preventDefault(); 
                 const formMessage = document.getElementById('downloadFormMessage');
                 const nameInput = downloadFormElement.querySelector('input[name="Name"]').value;
                 const documentName = document.getElementById('documentNamePlaceholder').textContent;
@@ -629,6 +680,7 @@
                 formMessage.classList.add('text-zinc-400');
                 formMessage.innerHTML = `Processing request for <span class="font-bold text-accent-gold">${documentName}</span>...`;
 
+                // Fetch logic to submit data and trigger download
                 fetch(formActionUrl, { method: 'POST', body: new FormData(this) })
                 .then(response => {
                     if (response.ok) {
@@ -636,6 +688,7 @@
                         formMessage.classList.remove('text-zinc-400');
                         formMessage.classList.add('text-green-500'); 
                         
+                        // Trigger download in a new tab
                         const tempLink = document.createElement('a');
                         tempLink.href = downloadUrl;
                         tempLink.target = '_blank'; 
@@ -664,11 +717,21 @@
                 const formActionUrl = this.action;
                 const nameInput = formElement.querySelector('input[name="Name"]').value;
                 const unitInput = formElement.querySelector('select[name="UnitType"]').value;
+                
+                // Client-side validation for main form
+                if (unitInput === "") {
+                    formMessage.innerHTML = `<span class="font-bold text-accent-gold">Please select a Unit Type.</span>`;
+                    formMessage.classList.remove('hidden', 'text-green-500');
+                    formMessage.classList.add('text-red-500');
+                    setTimeout(() => { formMessage.classList.add('hidden'); }, 3000);
+                    return;
+                }
 
                 formMessage.innerHTML = `Submitting your request...`;
                 formMessage.classList.remove('hidden', 'text-green-500', 'text-red-500');
                 formMessage.classList.add('text-zinc-400');
 
+                // Fetch logic for standard form submission
                 fetch(formActionUrl, { method: 'POST', body: new FormData(this) })
                 .then(response => {
                     if (response.ok) {
