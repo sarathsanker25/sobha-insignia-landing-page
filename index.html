@@ -240,7 +240,7 @@
                 </div>
 
                 <!-- 
-                  NEW: REQUEST 2 - "Request Cost Sheet" Form
+                  NEW: REQUEST 2 - "Get Cost Sheet" Form
                   This form is placed centrally within the overview section.
                 -->
                 <div class="mt-20 max-w-2xl mx-auto bg-surface-dark/80 p-8 rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm">
@@ -599,7 +599,7 @@
                 <p class="text-xs text-gray-500">By submitting, you agree to receive communications from SOBHA.</p>
                 
                 <!-- MODIFIED: CTA button is now green -->
-                <button type="submit" id="modalSubmitBtn" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-lg font-medium text-black bg-cta-green hover:bg-cta-green-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cta-green transition duration-300 transform hover:scale-[1.01]">
+                <button type="submit" id="modalSubmitBtn" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-lg font-medium text-white bg-cta-green hover:bg-cta-green-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cta-green transition duration-300 transform hover:scale-[1.01]">
                     Submit & Proceed
                 </button>
             </form>
@@ -756,7 +756,7 @@
         const modalActionType = document.getElementById('modalActionType');
 
         function openLeadModal(actionType) {
-            modalTitle.textContent = `Request: ${actionType}`;
+            modalTitle.textContent = `Get: ${actionType}`;
             modalActionType.value = actionType;
             leadModal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
